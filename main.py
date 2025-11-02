@@ -37,7 +37,7 @@ def main():
 
             print("Detected name:", name) # recognisation 
             cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
-            cv2.putText(frame, name, (right, top - 8), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, 0.65, (255, 255, 255), 2)
+            cv2.putText(frame, name, (left, top - 8), cv2.FONT_HERSHEY_DUPLEX, 0.65, (255, 255, 255), 2)
 
         cv2.imshow("Face Recognition", frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -47,3 +47,4 @@ def main():
     cv2.destroyAllWindows()  # closes webcam window
 
 main()
+
